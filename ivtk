@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sudo apt install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+rm -fr install/VTK-$1
+cd VTK 
+git archive --format=zip --prefix=VTK-$1/ v$1 > ../install/VTK-$1.zip
+cd ../install
+unzip VTK-$1.zip
+
+cd VTK-$1/
+mkdir -p build/release
+cd build/release
+cmake -DCMAKE_BUILD_TYPE=Release -DVTK_WRAP_PYTHON=1 -DVTK_PYTHON_VERSION=3 -DBUILD_TESTING=0 ../..
+make -j8

@@ -1,0 +1,12 @@
+[submodule "cgal"]
+	path = cgal
+	url = https://github.com/CGAL/cgal.git
+[submodule "VTK"]
+	path = VTK
+	url = https://github.com/Kitware/VTK.git
+[submodule "oce"]
+	path = oce
+	url = https://github.com/tpaviot/oce
+[submodule "eigen"]
+	path = eigen
+	url = https://github.com/eigenteam/eigen-git-mirror.git

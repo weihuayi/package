@@ -1,0 +1,12 @@
+#!/bin/bash
+
+sudo apt install nvidia-cuda-dev 
+cd eigen 
+git archive --format=zip --prefix=eigen-$1/ $2 > ../install/eigen-$1.zip
+cd ../install
+unzip eigen-$1.zip
+
+cd eigen-$1/
+mkdir -p build/release
+cd build/release
+cmake -DCMAKE_BUILD_TYPE=Release ../..

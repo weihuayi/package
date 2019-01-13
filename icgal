@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# install 
+sudo apt install libgmp-dev libmpfr-dev libboost-dev libboost-thread-dev libboost-system-dev zlib1g-dev libblas-dev liblapack-dev
+cd cgal 
+git archive --format=zip --prefix=CGAL-$1/ releases/CGAL-$1 > ../install/CGAL-$1.zip
+cd ../install
+unzip CGAL-$1.zip
+
+cd CGAL-$1/
+mkdir -p build/release
+cd build/release
+cmake -DCMAKE_BUILD_TYPE=Release ../..
+make
