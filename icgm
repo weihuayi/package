@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# git clean -xfd 连 gitignore 的untrack 文件/目录也一起删掉
+
+rm -fr install/cgm-$1
+cd cgm 
+git archive --format=zip --prefix=cgm-$1/ $1 > ../install/cgm-$1.zip
+cd ../install
+unzip cgm-$1.zip
+
+cd cgm-$1/
+autoreconf -fi
+./configure F77=mpif77 CXX=mpicxx FC=mpifort --enable-shared --enable-optimize --with-mpi=/usr/lib/x86_64-linux-gnu/openmpi --with-occ=/usr/local
+
+make -j8

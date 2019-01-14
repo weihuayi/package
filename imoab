@@ -1,0 +1,17 @@
+#!/bin/bash
+
+sudo apt install libhdf5-dev libnetcdf-dev libmetis-dev
+rm -fr install/moab-$1
+cd moab 
+git archive --format=zip --prefix=moab-$1/ v$1 > ../install/moab-$1.zip
+cd ../install
+unzip moab-$1.zip
+
+cd moab-$1/
+autoreconf -fi
+./configure CC=mpicc CXX=mpicxx FF77=mpif77 FC=mpifort \
+    --with-pic=1 \
+    --enable-shared --enable-optimize --enable-tools \
+    --with-mpi=/usr/lib/x86_64-linux-gnu/openmpi \
+    --with-vtk=/usr/local \
+    --with-vtk-lib-suffix=-8.1

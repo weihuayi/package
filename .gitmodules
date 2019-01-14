@@ -10,3 +10,12 @@
 [submodule "eigen"]
 	path = eigen
 	url = https://github.com/eigenteam/eigen-git-mirror.git
+[submodule "cgm"]
+	path = cgm
+	url = https://whymath@bitbucket.org/fathomteam/cgm.git
+[submodule "p4est"]
+	path = p4est
+	url = https://github.com/cburstedde/p4est.git
+[submodule "meshkit"]
+	path = meshkit
+	url = https://whymath@bitbucket.org/fathomteam/meshkit.git

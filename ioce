@@ -1,11 +1,12 @@
 #!/bin/bash
 
+sudo apt install libfreetype6-dev
 rm -fr install/OCE-$1
 cd oce 
 git archive --format=zip --prefix=OCE-$1/ OCE-$1 > ../install/OCE-$1.zip
 cd ../install
 unzip OCE-$1.zip
 
-cd VTK-$1/
+cd OCE-$1/
 mkdir -p build/release
 cd build/release

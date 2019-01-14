@@ -1,0 +1,16 @@
+#!/bin/bash
+
+sudo apt install liblua5.3-dev
+rm -fr install/p4est-$1
+cd p4est 
+git submodule init
+git submodule update
+git archive --format=zip --prefix=p4est-$1/ v$1 > ../install/p4est-$1.zip
+cd ../install
+unzip p4est-$1.zip
+
+cd p4est-$1/
+cp ../../p4est/sc/* sc/ -r
+./bootstrap
+./configure CFLAGS="-O2 -Wall -Wno-unused-but-set-variable" LIBS=/usr/lib/x86_64-linux-gnu/liblua5.3.so --enable-mpi
+
