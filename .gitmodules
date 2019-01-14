@@ -19,3 +19,6 @@
 [submodule "meshkit"]
 	path = meshkit
 	url = https://whymath@bitbucket.org/fathomteam/meshkit.git
+[submodule "moab"]
+	path = moab
+	url = https://whymath@bitbucket.org/fathomteam/moab.git

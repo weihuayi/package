@@ -1,0 +1,41 @@
+LPORDDIR = $(topdir)/PORD/lib/
+IPORD    = -I$(topdir)/PORD/include/
+LPORD    = -L$(LPORDDIR) -lpord
+
+LMETISDIR = /D/msys64/mingw64/lib
+IMETIS    = -I/D/msys64/mingw64/include
+
+LMETIS    = -L$(LMETISDIR) -lmetis
+
+ORDERINGSF  = -Dmetis -Dpord
+ORDERINGSC  = $(ORDERINGSF)
+
+# PLAT : use it to add a default suffix to the generated libraries
+PLAT    = 
+LIBEXT  = .a
+OUTC    = -o 
+OUTF    = -o 
+RM      = /bin/rm -f
+CC      = gcc
+FC      = gfortran
+FL      = gfortran 
+AR      = ar vr 
+RANLIB  = ranlib
+
+
+INCSEQ  = -I$(topdir)/libseq
+LIBSEQ  = $(LAPACK) -L$(topdir)/libseq -lmpiseq
+
+LIBBLAS = -lopenblas
+LIBOTHERS = -lpthread
+
+CDEFS = -DAdd_
+
+#COMPILER OPTIONS
+OPTF    = -O -fPIC
+OPTC    = -O -fPIC
+OPTL    = -O -fPIC 
+
+INCS = $(INCSEQ)
+LIBS = $(LIBSEQ)
+LIBSEQNEEDED = libseqneeded
