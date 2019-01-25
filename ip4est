@@ -12,5 +12,5 @@ unzip p4est-$1.zip
 cd p4est-$1/
 cp ../../p4est/sc/* sc/ -r
 ./bootstrap
-./configure CFLAGS="-O2 -Wall -Wno-unused-but-set-variable" LIBS=/usr/lib/x86_64-linux-gnu/liblua5.3.so --enable-mpi
+./configure --prefix=/usr/local --with-metis --enable-mpi CFLAGS="-O2 -Wall -Wno-unused-but-set-variable" LIBS=/usr/lib/x86_64-linux-gnu/liblua5.3.so
 
