@@ -22,3 +22,6 @@
 [submodule "moab"]
 	path = moab
 	url = https://whymath@bitbucket.org/fathomteam/moab.git
+[submodule "Trilinos"]
+	path = Trilinos
+	url = https://github.com/trilinos/Trilinos.git
