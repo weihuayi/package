@@ -1,0 +1,21 @@
+#!/bin/bash
+sudo apt install qt5-default libqt5x11extras5-dev qttools5-dev
+sudo apt install libqt5xmlpatterns5-dev python3-pyqt5.qtxmlpatterns qtxmlpatterns5-dev-tools
+sudo apt install python3-pyqt5 python3-pyqt5.qtx11extras
+sudo apt install ffmpeg
+sudo apt install libavutil-dev libavcodec-dev libavformat-dev libavdevice-dev libavfilter-dev libavresample-dev libswscale-dev libswresample-dev libpostproc-dev
+sudo apt install libtbb-dev
+sudo apt install libxml2-dev
+#sudo apt install libosmesa6-dev
+
+rm -fr install/ParaView-$1
+cd ParaView 
+git archive --format=zip --prefix=ParaView-$1/ v$1 > ../install/ParaView-$1.zip
+cd ../install
+unzip ParaView-$1.zip
+
+cd ParaView-$1/
+mkdir -p build/release
+cd build/release
+#cmake -DCMAKE_BUILD_TYPE=Release -DVTK_WRAP_PYTHON=1 -DVTK_PYTHON_VERSION=3 -DBUILD_TESTING=0 ../..
+#make -j8

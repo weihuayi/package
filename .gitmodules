@@ -25,3 +25,9 @@
 [submodule "Trilinos"]
 	path = Trilinos
 	url = https://github.com/trilinos/Trilinos.git
+[submodule "ParaView"]
+	path = ParaView
+	url = https://github.com/Kitware/ParaView.git
+[submodule "vtkplotter"]
+	path = vtkplotter
+	url = https://github.com/marcomusy/vtkplotter.git
