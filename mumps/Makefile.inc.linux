@@ -1,0 +1,50 @@
+SCOTCHDIR  = ${HOME}/.local
+ISCOTCH    = -I$(SCOTCHDIR)/include
+
+LSCOTCH    = -L$(SCOTCHDIR)/lib -lesmumps -lscotch -lscotcherr
+
+LPORDDIR = $(topdir)/PORD/lib/
+IPORD    = -I$(topdir)/PORD/include
+LPORD    = -L$(LPORDDIR) -lpord
+
+LMETISDIR = ${HOME}/.local/lib
+IMETIS   = -I${HOME}/.local/include 
+
+LMETIS    = -L$(LMETISDIR) -lmetis
+
+
+ORDERINGSF  = -Dpord -Dscotch -Dmetis
+ORDERINGSC  = $(ORDERINGSF)
+
+LORDERINGS = $(LMETIS) $(LPORD) $(LSCOTCH)
+IORDERINGSF = $(ISCOTCH)
+IORDERINGSC = $(IMETIS) $(IPORD) $(ISCOTCH)
+
+
+PLAT    = 
+LIBEXT  = .a
+OUTC    = -o 
+OUTF    = -o 
+RM      = /bin/rm -f
+CC      = gcc
+FC      = gfortran 
+FL      = gfortran 
+AR      = ar vr 
+RANLIB  = ranlib
+
+INCSEQ  = -I$(topdir)/libseq
+LIBSEQ  = $(LAPACK) -L$(topdir)/libseq -lmpiseq
+
+LIBBLAS = -L${HOME}/.local/lib -lopenblas
+
+LIBOTHERS = -lpthread
+
+CDEFS = -DAdd_
+
+OPTF    = -O -fPIC
+OPTC    = -O -fPIC
+OPTL    = -O -fPIC
+
+INCS = $(INCSEQ)
+LIBS = $(LIBSEQ)
+LIBSEQNEEDED = libseqneeded
