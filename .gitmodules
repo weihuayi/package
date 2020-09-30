@@ -31,3 +31,9 @@
 [submodule "vtkplotter"]
 	path = vtkplotter
 	url = https://github.com/marcomusy/vtkplotter.git
+[submodule "OpenBLAS"]
+	path = OpenBLAS
+	url = https://github.com/xianyi/OpenBLAS.git
+[submodule "pymumps"]
+	path = pymumps
+	url = https://github.com/PyMumps/pymumps.git
