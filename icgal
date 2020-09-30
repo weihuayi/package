@@ -4,6 +4,8 @@
 # sudo apt install libgmp-dev libmpfr-dev libboost-dev 
 # sudo apt libboost-thread-dev libboost-system-dev zlib1g-dev libblas-dev liblapack-dev
 
+echo $#
+
 if [ $#!=1 ];then
     echo "USAGE:$0 <version-number>"
     echo "example: $0 4.14"
@@ -11,7 +13,7 @@ if [ $#!=1 ];then
 fi
 cd cgal 
 git pull
-git archive --format=zip --prefix=CGAL-$1/ releases/CGAL-$1 > ../install/CGAL-$1.zip
+git archive --format=zip --prefix=CGAL-$1/ v$1 > ../install/CGAL-$1.zip
 cd ../install
 unzip CGAL-$1.zip
 
