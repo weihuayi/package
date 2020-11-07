@@ -37,3 +37,6 @@
 [submodule "pymumps"]
 	path = pymumps
 	url = https://github.com/PyMumps/pymumps.git
+[submodule "ResInsight"]
+	path = ResInsight
+	url = https://github.com/OPM/ResInsight
