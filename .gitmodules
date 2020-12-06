@@ -40,3 +40,6 @@
 [submodule "matplotlib-cpp"]
 	path = matplotlib-cpp
 	url = https://github.com/lava/matplotlib-cpp.git
+[submodule "ResInsight"]
+	path = ResInsight
+	url = https://github.com/OPM/ResInsight

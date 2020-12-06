@@ -26,8 +26,6 @@ $ cp Make.inc/Makefile.inc.x86-64_pc_linux2 ./Makefile.inc
 $ make -j8
 $ make esmumps
 $ make install prefix=/home/why/.local
-$ cp ../lib/libesmumps.a /home/why/.local/lib/
-$ cp ../include/esmumps.h /home/why/.local/include/
 ```
 
 ## OpenBLAS
