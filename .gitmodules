@@ -37,3 +37,6 @@
 [submodule "pymumps"]
 	path = pymumps
 	url = https://github.com/PyMumps/pymumps.git
+[submodule "matplotlib-cpp"]
+	path = matplotlib-cpp
+	url = https://github.com/lava/matplotlib-cpp.git
