@@ -43,3 +43,6 @@
 [submodule "ResInsight"]
 	path = ResInsight
 	url = https://github.com/OPM/ResInsight
+[submodule "vtk"]
+	path = vtk
+	url = https://gitlab.kitware.com/vtk/vtk.git
