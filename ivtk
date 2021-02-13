@@ -10,5 +10,5 @@ unzip VTK-$1.zip
 cd VTK-$1/
 mkdir -p build/release
 cd build/release
-cmake -DCMAKE_BUILD_TYPE=Release -DVTK_WRAP_PYTHON=1 -DVTK_PYTHON_VERSION=3 -DBUILD_TESTING=0 ../..
+cmake -DCMAKE_BUILD_TYPE=Release -DVTK_WRAP_PYTHON=1 -DVTK_PYTHON_VERSION=3 -DBUILD_TESTING=0 -DCMAKE_INSTALL_PREFIX=~/.local/vtk ../..
 make -j8
